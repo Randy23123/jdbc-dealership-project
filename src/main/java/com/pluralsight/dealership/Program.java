@@ -2,14 +2,13 @@ package com.pluralsight.dealership;
 
 import org.apache.commons.dbcp2.BasicDataSource;
 
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Program {
     public static Scanner scanner = new Scanner(System.in);
     public static DataManager dataManager;
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args){
         if (args.length < 2) {
             System.out.println("Please provide username and password as command-line arguments.");
             return;
@@ -38,6 +37,8 @@ public class Program {
                      4) Vehicle Color
                      5) Mileage Range
                      6) Vehicle Type
+                     7) Add & Removal
+                     8) Sale Or Lease
                      0) Exit
                     Select an option:""");
 
@@ -45,22 +46,28 @@ public class Program {
 
             switch (input) {
                 case "1":
-                    dataManager.priceRange();
+                    DataManager.priceRange();
                     break;
                 case "2":
-                    dataManager.makeModel();
+                    DataManager.makeModel();
                     break;
                 case "3":
-                    dataManager.yearRange();
+                    DataManager.yearRange();
                     break;
                 case "4":
-                    dataManager.carColor();
+                    DataManager.carColor();
                     break;
                 case "5":
-                    dataManager.mileageRange();
+                    DataManager.mileageRange();
                     break;
                 case "6":
-                    dataManager.carType();
+                    DataManager.carType();
+                    break;
+                case "7":
+                    Add_Remove.addRemoveScreen();
+                    break;
+                case "8":
+                   Sales_Lease.salesLeaseScreen();
                     break;
                 case "0":
                     System.out.println("Exiting. Thank you for using D & B Used Cars.");
