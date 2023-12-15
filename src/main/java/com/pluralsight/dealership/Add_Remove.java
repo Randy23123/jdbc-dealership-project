@@ -99,6 +99,7 @@ public class Add_Remove {
             e.printStackTrace();
         }
     }
+
     public static void removeCar(DataSource dataSource) {
         System.out.println("Enter VIN of the car to remove:");
         String vin = scanner.nextLine().trim();
