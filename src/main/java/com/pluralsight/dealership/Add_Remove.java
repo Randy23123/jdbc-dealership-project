@@ -93,7 +93,7 @@ public class Add_Remove {
 
             int rows = preparedStatement.executeUpdate();
 
-            System.out.printf("Car rows updated %d\n", rows);
+            System.out.printf("Car added %d\n", rows);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -112,7 +112,7 @@ public class Add_Remove {
 
             int rows = preparedStatement.executeUpdate();
 
-            System.out.printf("Car rows deleted: %d\n", rows);
+            System.out.printf("Car row deleted: %d\n", rows);
 
         } catch (SQLException e) {
             e.printStackTrace();
